@@ -167,7 +167,7 @@ substitutions:
     _OM_VERSION: "0.0.0-dev"
     _GCB_POST_SUBMIT: "0"
     _GCB_LATEST_VERSION: "undefined"
-logsBucket: 'gs://open-match-build-logs/'
+logsBucket: 'gs://om-build-logs/'
 options:
   sourceProvenanceHash: ['SHA256']
   machineType: 'N1_HIGHCPU_32'
