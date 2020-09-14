@@ -134,13 +134,13 @@ PORT_FORWARD_ADDRESS_FLAG = --address 0.0.0.0
 DASHBOARD_PORT = 9092
 
 # Open Match Cluster E2E Test Variables
-OPEN_MATCH_CI_LABEL = open-match-ci
+OPEN_MATCH_CI_LABEL = unity-cs-om-build-prd
 
 # This flag is set when running in Continuous Integration.
 ifdef OPEN_MATCH_CI_MODE
 	export KUBECONFIG = $(HOME)/.kube/config
 	GCLOUD = gcloud --quiet --no-user-output-enabled
-	GKE_CLUSTER_NAME = open-match-ci
+	GKE_CLUSTER_NAME = unity-cs-om-build-prd
 endif
 
 export PATH := $(TOOLCHAIN_BIN):$(PATH)
