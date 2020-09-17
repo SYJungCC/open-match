@@ -139,7 +139,7 @@ OPEN_MATCH_CI_LABEL = open-match-ci
 # This flag is set when running in Continuous Integration.
 ifdef OPEN_MATCH_CI_MODE
 	export KUBECONFIG = $(HOME)/.kube/config
-	GCLOUD = gcloud
+	GCLOUD = gcloud --quiet --no-user-output-enabled
 	GKE_CLUSTER_NAME = open-match-ci
 endif
 
