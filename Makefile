@@ -94,8 +94,8 @@ VERSIONED_CANARY_TAG = $(BASE_VERSION)-canary
 DATED_CANARY_TAG = $(YEAR_MONTH_DAY)-canary
 CANARY_TAG = canary
 GKE_CLUSTER_NAME = om-cluster
-GCP_REGION = us-central1
-GCP_ZONE = us-central1
+GCP_REGION = us-west1
+GCP_ZONE = us-west1-a
 GCP_LOCATION = $(GCP_ZONE)
 EXE_EXTENSION =
 GCP_LOCATION_FLAG = --zone $(GCP_ZONE)
@@ -134,13 +134,13 @@ PORT_FORWARD_ADDRESS_FLAG = --address 0.0.0.0
 DASHBOARD_PORT = 9092
 
 # Open Match Cluster E2E Test Variables
-OPEN_MATCH_CI_LABEL = ucg-om-prd-us-central1
+OPEN_MATCH_CI_LABEL = open-match-ci
 
 # This flag is set when running in Continuous Integration.
 ifdef OPEN_MATCH_CI_MODE
 	export KUBECONFIG = $(HOME)/.kube/config
-	GCLOUD = gcloud --quiet --no-user-output-enabled
-	GKE_CLUSTER_NAME = ucg-om-prd-us-central1
+	GCLOUD = gcloud
+	GKE_CLUSTER_NAME = open-match-ci
 endif
 
 export PATH := $(TOOLCHAIN_BIN):$(PATH)
